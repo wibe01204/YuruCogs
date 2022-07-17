@@ -16,17 +16,8 @@ else:
     console.setLevel(logging.INFO)
 log.addHandler(console)
 
-async def is_imgur_removed(url):
-        if "imgur.com" not in url:
-            return False
-        r = requests.get(url, allow_redirects=False)
-        try:
-            if r.headers['Location'] == "https://i.imgur.com/removed.png":
-                return True
-            else: 
-                return False
-        except KeyError:
-            return False
+BaseCog = getattr(commands, "Cog", object)
+
 
 class Roleplay(commands.Cog):
     """透過GIF與成員互動"""
