@@ -3,7 +3,7 @@ from redbot.core import commands, Config
 from random import randint
 import aiohttp
 import logging
-import requests
+
 
 log = logging.getLogger("Roleplay")  # Thanks to Sinbad for the example code for logging
 log.setLevel(logging.DEBUG)
